@@ -25,8 +25,17 @@ class CustomerList{
     }
     
     func printList(){
-        for i in theList{
-            i.printCustomer()
+        if(theList.count<1){
+            print("List is empty.")
+        }else{
+            var counter = 1;
+            for i in theList{
+                print("===============")
+                print("Customer #" + String(counter))
+                i.printCustomer()
+                counter = counter + 1
+                print("===============")
+            }
         }
     }
     
